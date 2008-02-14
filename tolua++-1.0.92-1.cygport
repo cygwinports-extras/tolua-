@@ -1,0 +1,30 @@
+inherit lua
+
+DESCRIPTION="Extended Lua C/C++ code generator"
+HOMEPAGE="http://www.codenix.com/~tolua/"
+SRC_URI="http://www.codenix.com/~tolua/${P}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	ln -sf custom-5.1.py custom.py
+
+	rm -f src/bin/toluabind.{c,h}
+	ln -sf toluabind_default.c src/bin/toluabind.c
+	ln -sf toluabind_default.h src/bin/toluabind.h
+	scons all
+
+#	sed -i -e '/^build_dev/ s/0/1/' custom.py
+#	rm -f src/bin/toluabind.{c,h}
+#	export PATH="${B}/bin:$PATH"
+#	scons all
+}
+
+src_install() {
+	cd ${B}
+	dobin bin/*.exe
+	dolib lib/*.a
+
+	insinto /usr/include
+	doins include/*.h
+}

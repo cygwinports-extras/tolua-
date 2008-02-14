@@ -1,0 +1,65 @@
+tolua++
+------------------------------------------
+tolua++ is an extended version of tolua, a tool to integrate C/C++ code 
+with Lua. tolua++ includes new features oriented to c++ such as:
+
+* Support for std::string as a basic type
+* Support for class templates
+
+As well as other features and bugfixes. 
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  lua-5.1.3-1
+
+Build requirements:
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.codenix.com/~tolua/
+
+Canonical download:
+  http://www.codenix.com/~tolua/ 
+
+-------------------------------------------
+
+Build instructions:
+  unpack tolua++-1.0.92-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./tolua++-1.0.92-X.cygport all
+
+This will create:
+  /usr/src/tolua++-1.0.92-X-src.tar.bz2
+  /usr/src/tolua++-1.0.92-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/tolua++.exe
+  /usr/include/tolua++.h
+  /usr/lib/libtolua++.a
+  /usr/share/doc/tolua++-1.0.92/INSTALL
+  /usr/share/doc/tolua++-1.0.92/README
+
+------------------
+
+Port Notes:
+
+----- version 1.0.92-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
