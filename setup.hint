@@ -1,5 +1,5 @@
 category: Devel Lua
-requires: cygwin lua
+requires: lua
 sdesc: "Extended Lua C/C++ code generator"
 ldesc: "tolua++ is an extended version of tolua, a tool to integrate 
 C/C++ code with Lua. tolua++ includes new features oriented to c++ such 
